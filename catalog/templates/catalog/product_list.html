@@ -5,7 +5,5 @@
     {% for object in object_list %}
         {% include 'catalog/includes/inc_products.html' with object=object %}
     {% endfor %}
-    <a href="{% url 'catalog:main' %}" type="button"
-               class="btn btn-sm btn-outline-secondary">Весь ассортимент</a>
 </div>
 {% endblock %}

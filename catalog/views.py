@@ -4,7 +4,7 @@ from catalog.models import Product
 # Create your views here.
 def products(request):
     context = {
-        'object_list': Product.objects.all()[:3],
+        'object_list': Product.objects.all(),
         'title': 'Продукты'
     }
     return render(request, 'catalog/product_list.html', context=context)
@@ -12,13 +12,6 @@ def products(request):
 def main(request):
     context = {
         'object_list': Product.objects.all(),
-        'title': 'Продукты-главная'
-    }
-    return render(request, 'catalog/main.html', context=context)
-
-def main_3(request):
-    context = {
-        'object_list': Product.objects.all()[:3],
         'title': 'Продукты-главная'
     }
     return render(request, 'catalog/main.html', context=context)
