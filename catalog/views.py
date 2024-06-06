@@ -9,12 +9,6 @@ def products(request):
     }
     return render(request, 'catalog/product_list.html', context=context)
 
-def main(request):
-    context = {
-        'object_list': Product.objects.all(),
-        'title': 'Продукты-главная'
-    }
-    return render(request, 'catalog/main.html', context=context)
 
 
 def description(request,pk):
